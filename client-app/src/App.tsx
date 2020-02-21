@@ -22,8 +22,8 @@ const App: React.FC = () => {
         </Header.Content>
       </Header>
       <List>
-        {state.map((value: IServerData) => (
-          <List.Item key={value.id}>{value.name}</List.Item>
+        {state.map(({id, name}: IServerData) => (
+          <List.Item key={id}>{name}</List.Item>
         ))}
       </List>
     </div>
