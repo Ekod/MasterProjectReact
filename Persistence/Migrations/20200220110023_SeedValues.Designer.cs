@@ -6,46 +6,46 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Persistence.Migrations
 {
   [DbContext(typeof(DataContext))]
-    [Migration("20200220110023_SeedValues")]
-    partial class SeedValues
+  [Migration("20200220110023_SeedValues")]
+  partial class SeedValues
+  {
+    protected override void BuildTargetModel(ModelBuilder modelBuilder)
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
-        {
 #pragma warning disable 612, 618
-            modelBuilder
-                .HasAnnotation("ProductVersion", "3.0.0");
+      modelBuilder
+          .HasAnnotation("ProductVersion", "3.0.0");
 
-            modelBuilder.Entity("Domain.Value", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+      modelBuilder.Entity("Domain.Value", b =>
+          {
+            b.Property<int>("Id")
+                      .ValueGeneratedOnAdd()
+                      .HasColumnType("INTEGER");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("TEXT");
+            b.Property<string>("Name")
+                      .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+            b.HasKey("Id");
 
-                    b.ToTable("Values");
+            b.ToTable("Values");
 
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Value 101"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Value 102"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Value 103"
-                        });
-                });
+            b.HasData(
+                      new
+                  {
+                    Id = 1,
+                    Name = "Value 101"
+                  },
+                      new
+                  {
+                    Id = 2,
+                    Name = "Value 102"
+                  },
+                      new
+                  {
+                    Id = 3,
+                    Name = "Value 103"
+                  });
+          });
 #pragma warning restore 612, 618
-        }
     }
+  }
 }
