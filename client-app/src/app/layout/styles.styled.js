@@ -1,4 +1,4 @@
-import { Menu, Container} from "semantic-ui-react";
+import { Menu, Container } from "semantic-ui-react";
 import styled from "styled-components";
 
 export const MenuTop = styled(Menu)`
@@ -11,5 +11,5 @@ export const MenuTop = styled(Menu)`
 `;
 
 export const ContainerInApp = styled(Container)`
-    margin-top: 7em;
-`
+  margin-top: 7em;
+`;

@@ -37,18 +37,16 @@ const App: React.FC = () => {
     setActivities([...activities.filter(activity => activity.id !== id)]);
   };
 
-
-
   useEffect(() => {
     axios
       .get<IActivity[]>("http://localhost:5000/api/activities")
-      .then(response =>{
+      .then(response => {
         let activities: IActivity[] = [];
-        response.data.forEach(activity=> {
-          activity.date=activity.date.split(".")[0];
-          activities.push(activity)
-        })
-        setActivities(activities)
+        response.data.forEach(activity => {
+          activity.date = activity.date.split(".")[0];
+          activities.push(activity);
+        });
+        setActivities(activities);
       });
   }, []);
   return (

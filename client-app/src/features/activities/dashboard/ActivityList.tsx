@@ -1,5 +1,5 @@
 import React from "react";
-import { Item, Button, Label, Segment} from "semantic-ui-react";
+import { Item, Button, Label, Segment } from "semantic-ui-react";
 import { IActivity } from "../../../app/models/activity";
 
 interface IProps {
@@ -34,7 +34,7 @@ const ActivityList: React.FC<IProps> = ({
                   content="View"
                   color="blue"
                 />
-                 <Button
+                <Button
                   onClick={() => deleteActivity(activity.id)}
                   floated="right"
                   content="Delete"
