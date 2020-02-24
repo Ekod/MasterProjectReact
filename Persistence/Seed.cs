@@ -16,90 +16,81 @@ namespace Persistence
                 {
                     new Activity
                     {
-                        Title = "Past Activity 1",
+                        Title = "Прошлая активность 1",
                         Date = DateTime.Now.AddMonths(-2),
-                        Description = "Activity 2 months ago",
+                        Description = "Активность 2 месяца назад",
                         Category = "drinks",
                         City = "London",
                         Venue = "Pub",
                     },
                     new Activity
                     {
-                        Title = "Past Activity 2",
+                        Title = "Прошлая активность 2",
                         Date = DateTime.Now.AddMonths(-1),
-                        Description = "Activity 1 month ago",
+                        Description = "Активность 1 месяц назад",
                         Category = "culture",
                         City = "Paris",
                         Venue = "Louvre",
                     },
                     new Activity
                     {
-                        Title = "Future Activity 1",
+                        Title = "Будущая активность 1",
                         Date = DateTime.Now.AddMonths(1),
-                        Description = "Activity 1 month in future",
+                        Description = "Активность через месяц",
                         Category = "culture",
                         City = "London",
                         Venue = "Natural History Museum",
                     },
                     new Activity
                     {
-                        Title = "Future Activity 2",
+                        Title = "Будущая активность 2",
                         Date = DateTime.Now.AddMonths(2),
-                        Description = "Activity 2 months in future",
+                        Description = "Активность через 2 месяца",
                         Category = "music",
                         City = "London",
                         Venue = "O2 Arena",
                     },
                     new Activity
                     {
-                        Title = "Future Activity 3",
+                        Title = "Будущая активность 3",
                         Date = DateTime.Now.AddMonths(3),
-                        Description = "Activity 3 months in future",
+                        Description = "Активность через 3 месяца",
                         Category = "drinks",
                         City = "London",
                         Venue = "Another pub",
                     },
                     new Activity
                     {
-                        Title = "Future Activity 4",
+                        Title = "Будущая активность 4",
                         Date = DateTime.Now.AddMonths(4),
-                        Description = "Activity 4 months in future",
+                        Description = "Активность через 4 месяца",
                         Category = "drinks",
                         City = "London",
                         Venue = "Yet another pub",
                     },
                     new Activity
                     {
-                        Title = "Future Activity 5",
+                        Title = "Будущая активность 5",
                         Date = DateTime.Now.AddMonths(5),
-                        Description = "Activity 5 months in future",
+                        Description = "Активность через 5 месяцев",
                         Category = "drinks",
                         City = "London",
                         Venue = "Just another pub",
                     },
                     new Activity
                     {
-                        Title = "Future Activity 6",
+                        Title = "Будущая активность 6",
                         Date = DateTime.Now.AddMonths(6),
-                        Description = "Activity 6 months in future",
+                        Description = "Активность через 6 месяцев",
                         Category = "music",
                         City = "London",
                         Venue = "Roundhouse Camden",
                     },
                     new Activity
                     {
-                        Title = "Future Activity 7",
-                        Date = DateTime.Now.AddMonths(7),
-                        Description = "Activity 2 months ago",
-                        Category = "travel",
-                        City = "London",
-                        Venue = "Somewhere on the Thames",
-                    },
-                    new Activity
-                    {
-                        Title = "Future Activity 8",
+                        Title = "Будущая активность 8",
                         Date = DateTime.Now.AddMonths(8),
-                        Description = "Activity 8 months in future",
+                        Description = "Активность через 7 месяцев",
                         Category = "film",
                         City = "London",
                         Venue = "Cinema",
