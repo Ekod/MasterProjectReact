@@ -1,5 +1,5 @@
 import React, { useState, FormEvent, useContext, useEffect } from "react";
-import { Segment, Form, Button } from "semantic-ui-react";
+import { Segment, Form, Button, Grid } from "semantic-ui-react";
 import { IActivity } from "../../../app/models/activity";
 import { v4 as uuid } from "uuid";
 import { observer } from "mobx-react-lite";
@@ -75,63 +75,67 @@ const ActivityForm: React.FC<RouteComponentProps<DetailParams>> = ({
   };
 
   return (
-    <Segment clearing>
-      <Form onSubmit={hadleSubmit}>
-        <Form.Input
-          onChange={handleInputChange}
-          name="title"
-          placeholder="Название"
-          value={activity.title}
-        />
-        <Form.TextArea
-          onChange={handleInputChange}
-          rows={2}
-          name="description"
-          placeholder="Описание"
-          value={activity.description}
-        />
-        <Form.Input
-          onChange={handleInputChange}
-          name="category"
-          placeholder="Категория"
-          value={activity.category}
-        />
-        <Form.Input
-          onChange={handleInputChange}
-          type="datetime-local"
-          name="date"
-          placeholder="Дата"
-          value={activity.date}
-        />
-        <Form.Input
-          onChange={handleInputChange}
-          name="city"
-          placeholder="Город"
-          value={activity.city}
-        />
-        <Form.Input
-          onChange={handleInputChange}
-          name="venue"
-          placeholder="Место"
-          value={activity.venue}
-        />
-        <Button.Group widths={2}>
-          <Button
-            loading={submitting}
-            floated="right"
-            positive
-            type="submit"
-            content="Submit"
-          />
-          <Button
-            onClick={() => history.push("/activities")}
-            floated="right"
-            type="button"
-            content="Cancel"
-          />
-        </Button.Group>
-      </Form>
-    </Segment>
+    <Grid>
+      <Grid.Column width={10}>
+        <Segment clearing>
+          <Form onSubmit={hadleSubmit}>
+            <Form.Input
+              onChange={handleInputChange}
+              name="title"
+              placeholder="Название"
+              value={activity.title}
+            />
+            <Form.TextArea
+              onChange={handleInputChange}
+              rows={2}
+              name="description"
+              placeholder="Описание"
+              value={activity.description}
+            />
+            <Form.Input
+              onChange={handleInputChange}
+              name="category"
+              placeholder="Категория"
+              value={activity.category}
+            />
+            <Form.Input
+              onChange={handleInputChange}
+              type="datetime-local"
+              name="date"
+              placeholder="Дата"
+              value={activity.date}
+            />
+            <Form.Input
+              onChange={handleInputChange}
+              name="city"
+              placeholder="Город"
+              value={activity.city}
+            />
+            <Form.Input
+              onChange={handleInputChange}
+              name="venue"
+              placeholder="Место"
+              value={activity.venue}
+            />
+            <Button.Group widths={2}>
+              <Button
+                loading={submitting}
+                floated="right"
+                positive
+                type="submit"
+                content="Submit"
+              />
+              <Button
+                onClick={() => history.push("/activities")}
+                floated="right"
+                type="button"
+                content="Cancel"
+              />
+            </Button.Group>
+          </Form>
+        </Segment>
+      </Grid.Column>
+    </Grid>
   );
 };
 export default observer(ActivityForm);
