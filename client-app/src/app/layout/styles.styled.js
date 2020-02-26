@@ -13,3 +13,7 @@ export const MenuTop = styled(Menu)`
 export const ContainerInApp = styled(Container)`
   margin-top: 7em;
 `;
+
+export const HomePageContainer = styled(Container)`
+  margint-top: 7em;
+`;
