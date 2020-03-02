@@ -1,5 +1,4 @@
 import React from "react";
-import { HomePageContainer } from "../../app/layout/styles.styled";
 import { Link } from "react-router-dom";
 import { Segment, Container, Header, Button, Image } from "semantic-ui-react";
 

@@ -20,7 +20,7 @@ export const HomePageContainer = styled(Container)`
 
 export const ImageDetailedHeader = styled(Image)`
   filter: brightness(30%);
-`
+`;
 
 export const SegmentDetailedHeader = styled(Segment)`
   position: absolute;
@@ -29,4 +29,4 @@ export const SegmentDetailedHeader = styled(Segment)`
   width: 100%;
   height: auto;
   color: white;
-`
+`;
