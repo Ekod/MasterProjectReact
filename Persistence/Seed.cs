@@ -1,18 +1,47 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Domain;
-
+using Microsoft.AspNetCore.Identity;
 
 namespace Persistence
 {
-    public class Seed
+  public class Seed
+  {
+    public static async Task SeedData(DataContext context, UserManager<AppUser> userManager)
     {
-        public static void SeedData(DataContext context)
+      if (!userManager.Users.Any())
+      {
+        var users = new List<AppUser>
+                {
+                    new AppUser
+                    {
+                        DisplayName = "Bob",
+                        UserName = "bob",
+                        Email = "bob@text.com"
+                    },
+                    new AppUser
+                    {
+                        DisplayName = "Tom",
+                        UserName = "tom",
+                        Email = "tom@text.com"
+                    },
+                    new AppUser
+                    {
+                        DisplayName = "Jane",
+                        UserName = "jane",
+                        Email = "jane@text.com"
+                    },
+                };
+        foreach (var user in users)
         {
-            if(!context.Activities.Any())
-            {
-                var activities = new List<Activity>
+          await userManager.CreateAsync(user, "Pa$$w0rd");
+        }
+      }
+      if (!context.Activities.Any())
+      {
+        var activities = new List<Activity>
                 {
                     new Activity
                     {
@@ -94,11 +123,11 @@ namespace Persistence
                         Category = "film",
                         City = "London",
                         Venue = "Cinema",
-                    }   
+                    }
                 };
-                context.Activities.AddRange(activities);
-                context.SaveChanges();
-            }
-        }
+        context.Activities.AddRange(activities);
+        context.SaveChanges();
+      }
     }
+  }
 }
